@@ -32,7 +32,7 @@ Maven+Git
 6. 邮件功能，使用javax.mail实现。<br>
 7. 增加抢购倒计时功能。<br>
 8. 解决js跨域问题。<br>
-9. TPS/QPS(等待测试)。<br>
+# TPS/QPS(等待测试)
 # 页面效果
 ## Login
 ![image](https://github.com/youHappyOK/moana/raw/master/screenshots/login.png)<br>
@@ -40,4 +40,7 @@ Maven+Git
 ![image](https://github.com/youHappyOK/moana/raw/master/screenshots/movielist.png)<br>
 ## MovieDetail
 ![image](https://github.com/youHappyOK/moana/raw/master/screenshots/detail_1.png)<br>
+
+----------
+
 ![image](https://github.com/youHappyOK/moana/raw/master/screenshots/detail_2.png)<br>
