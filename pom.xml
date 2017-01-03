@@ -1,0 +1,231 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>edu.cqupt.ticketsys</groupId>
+  <artifactId>moana</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>moana Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- 数据库相关依赖 -->
+	<dependency>
+	    <groupId>org.mariadb.jdbc</groupId>
+	    <artifactId>mariadb-java-client</artifactId>
+	    <version>1.5.5</version>
+	    <scope>runtime</scope>
+	</dependency>
+	<!--
+		<dependency>
+   		<groupId>c3p0</groupId>
+   		<artifactId>c3p0</artifactId>
+   		<version>0.9.1.2</version>
+   	</dependency>
+   	 -->
+   	 
+   	<!-- spring整合datanucleus相关依赖 -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-orm</artifactId>
+	    <version>4.3.2.RELEASE</version>
+	</dependency>
+	
+   	<!-- 数据持久层依赖，datanucleus -->
+    <dependency>
+         <groupId>org.datanucleus</groupId>
+         <artifactId>javax.jdo</artifactId>
+         <version>3.2.0-m3</version>
+     </dependency>
+     <dependency>
+         <groupId>org.datanucleus</groupId>
+         <artifactId>datanucleus-core</artifactId>
+         <version>(4.1, 4.9)</version>
+     </dependency>
+     <dependency>
+         <groupId>org.datanucleus</groupId>
+         <artifactId>datanucleus-api-jdo</artifactId>
+         <version>[4.2.0-release, 4.9)</version>
+     </dependency>
+     <dependency>
+         <groupId>org.datanucleus</groupId>
+         <artifactId>datanucleus-rdbms</artifactId>
+         <version>(4.1, 4.9)</version>      
+     </dependency>
+   	
+   	<!-- Servlet web 相关依赖 -->
+   	<dependency>
+   		<groupId>taglibs</groupId>
+   		<artifactId>standard</artifactId>
+   		<version>1.1.2</version>
+   	</dependency>
+   	<dependency>
+   		<groupId>jstl</groupId>
+   		<artifactId>jstl</artifactId>
+   		<version>1.2</version>
+   	</dependency>
+   	<dependency>
+   		<groupId>com.fasterxml.jackson.core</groupId>
+   		<artifactId>jackson-databind</artifactId>
+   		<version>2.5.4</version>
+   	</dependency> 
+	<dependency>
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>javax.servlet-api</artifactId>
+    	<version>3.1.0</version>
+    	<scope>provided</scope>
+	</dependency>
+	
+   	<!-- spring核心依赖 -->
+   	<dependency>
+   		<groupId>org.springframework</groupId>
+   		<artifactId>spring-core</artifactId>
+   		<version>4.1.7.RELEASE</version>
+   	</dependency>
+   	<dependency>
+   		<groupId>org.springframework</groupId>
+   		<artifactId>spring-beans</artifactId>
+   		<version>4.1.7.RELEASE</version>
+   	</dependency>
+   	<dependency>
+   		<groupId>org.springframework</groupId>
+   		<artifactId>spring-context</artifactId>
+   		<version>4.1.7.RELEASE</version>
+   	</dependency>
+   	
+   	<!-- spring 配置aop事务依赖 -->
+   	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjweaver</artifactId>
+	    <version>1.8.10</version>
+	</dependency>
+	
+   	<!-- spring dao层依赖 -->
+   	<dependency>
+   		<groupId>org.springframework</groupId>
+   		<artifactId>spring-jdbc</artifactId>
+   		<version>4.1.7.RELEASE</version>
+   	</dependency>
+   	<dependency>
+   		<groupId>org.springframework</groupId>
+   		<artifactId>spring-tx</artifactId>
+   		<version>4.1.7.RELEASE</version>
+   	</dependency>
+   	<!-- spring web依赖 -->
+   	<dependency>
+   		<groupId>org.springframework</groupId>
+   		<artifactId>spring-web</artifactId>
+   		<version>4.1.7.RELEASE</version>
+   	</dependency>
+   	<dependency>
+   		<groupId>org.springframework</groupId>
+   		<artifactId>spring-webmvc</artifactId>
+   		<version>4.1.7.RELEASE</version>
+   	</dependency>
+   	<!-- spring test依赖 -->
+   	<dependency>
+   		<groupId>org.springframework</groupId> 
+   		<artifactId>spring-test</artifactId>
+   		<version>4.1.7.RELEASE</version>
+   	</dependency>
+   	     
+    <!-- 日志：slf4j，logback slf4j接口/规范 ，logback实现。此处使用slf4j+logback -->
+    <dependency>
+    	<groupId>org.slf4j</groupId>
+    	<artifactId>slf4j-api</artifactId>
+    	<version>1.7.6</version>
+    </dependency>
+    <dependency>
+    	<groupId>ch.qos.logback</groupId>
+    	<artifactId>logback-core</artifactId>
+    	<version>1.1.1</version>
+    </dependency>
+    
+    <!-- 实现slf4j接口并整合 -->
+    <dependency>
+    	<groupId>ch.qos.logback</groupId>
+    	<artifactId>logback-classic</artifactId>
+    	<version>1.1.1</version>
+    </dependency>
+    
+    <!-- 邮件相关依赖 -->
+	<dependency>
+	    <groupId>com.sun.mail</groupId>
+	    <artifactId>javax.mail</artifactId>
+	    <version>1.5.6</version>
+	</dependency>
+	
+    <!-- 解决js跨域问题 -->
+    <dependency>
+		<groupId>com.thetransactioncompany</groupId>
+		<artifactId>cors-filter</artifactId>
+		<version>2.5</version>
+	</dependency>
+  </dependencies>
+  
+  
+  <build>
+    <finalName>moana</finalName>
+    <plugins>
+ 		<plugin>
+            <groupId>org.datanucleus</groupId>
+            <artifactId>datanucleus-maven-plugin</artifactId>
+            <version>4.0.1</version>
+            <configuration>
+                
+                <verbose>false</verbose>
+            </configuration>
+            <executions>
+                <execution>
+                    <phase>process-classes</phase>
+                    <goals>
+                        <goal>enhance</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+        
+        <!-- maven-tomcat部署插件 -->
+        <plugin>
+		    <groupId>org.apache.tomcat.maven</groupId>
+		    <artifactId>tomcat7-maven-plugin</artifactId>
+		    <version>2.1</version>
+		    <configuration>
+		        <!-- 注意此处的url -->
+		        <url>http://localhost:8080/manager/text</url>
+		        <server>tomcat7</server> <!-- 此处的名字必须和setting.xml中配置的ID一致-->
+		        <username>admin</username>
+                <password>password</password>
+		        <path>/moana</path> <!-- 此处的名字是项目发布的工程名-->
+		    </configuration>
+		</plugin>
+		<plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>2.3.2</version>
+            <configuration>
+                <source>1.7</source>
+                <target>1.7</target>
+            </configuration>
+        </plugin>
+        <plugin>
+	        <artifactId>maven-assembly-plugin</artifactId>
+	        <version>2.2.1</version>
+	        <configuration/>
+     	</plugin>
+     	<!-- 跳过测试 -->
+     	<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
