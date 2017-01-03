@@ -32,7 +32,7 @@ Maven+Git
 6. 邮件功能，使用javax.mail实现。<br>
 7. 增加抢购倒计时功能。<br>
 8. 解决js跨域问题。<br>
-## TPS/QPS(等待测试)
+9. TPS/QPS(等待测试)。<br>
 # 页面效果
 ## Login
 ![image](https://github.com/youHappyOK/moana/raw/master/screenshots/login.png)<br>
